@@ -167,6 +167,7 @@ ro.surface_flinger.wcg_composition_dataspace=143261696
 
 # HWC
 debug.sf.predict_hwc_composition_strategy=0
+debug.sf.disable_backpressure=1
 
 # Incremental FS
 ro.incremental.enable=yes
