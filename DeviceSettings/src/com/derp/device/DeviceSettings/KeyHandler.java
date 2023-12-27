@@ -20,6 +20,7 @@ import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
 import android.media.AudioManager;
+import android.os.UserHandle;
 import android.os.VibrationEffect;
 import android.os.VibratorManager;
 import android.os.Vibrator;
@@ -144,6 +145,6 @@ public class KeyHandler implements DeviceKeyHandler {
         final Intent intent = new Intent(Constants.SLIDER_UPDATE_ACTION);
         intent.putExtra("position", position);
         intent.putExtra("mode", mode);
-        mContext.sendBroadcast(intent);
+        mContext.sendBroadcastAsUser(intent, UserHandle.CURRENT);
     }
 }
