@@ -478,7 +478,7 @@ PRODUCT_EXTRA_VNDK_VERSIONS := 30
 
 # Wifi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi-service \
+    android.hardware.wifi@1.0-service \
     hostapd \
     libwpa_client \
     libwifi-hal-ctrl \
