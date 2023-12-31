@@ -56,13 +56,6 @@
 
         <activity android:name=".KeyHandler" android:exported="false" />
 
-        <activity
-            android:name=".TouchscreenGestureSettings"
-            android:label="@string/touchscreen_gesture_settings_title"
-            android:theme="@style/Theme.SubSettingsBase"
-            android:exported="false">
-        </activity>
-
         <receiver
             android:name="org.lineageos.device.DeviceSettings.Startup"
             android:directBootAware="true"
