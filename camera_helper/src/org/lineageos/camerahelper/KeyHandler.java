@@ -72,7 +72,7 @@ public class KeyHandler implements DeviceKeyHandler {
 
         return null;
     }
-
+    
     public void onPocketStateChanged(boolean inPocket) {
         // do nothing
     }
