@@ -33,7 +33,7 @@ PRODUCT_COPY_FILES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-yaap
+    $(LOCAL_PATH)/overlay-derp
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
@@ -109,7 +109,7 @@ PRODUCT_PACKAGES += \
     AntHalService-Soong \
     com.dsi.ant@1.0.vendor
 
-# YAAP Device Settings
+# DERP Device Settings
 PRODUCT_PACKAGES += \
     DeviceSettings
 
@@ -188,7 +188,6 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl:64 \
     android.hardware.camera.provider@2.4-service_64 \
     libxml2 \
-    Snap \
     libcamera_metadata_shim \
     vendor.oneplus.hardware.camera@1.0.vendor:64 \
     vendor.qti.hardware.camera.device@1.0.vendor:64
