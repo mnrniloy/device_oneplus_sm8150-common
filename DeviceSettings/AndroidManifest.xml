@@ -14,7 +14,7 @@
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           android:sharedUserId="android.uid.system"
-          package="com.yaap.device.DeviceSettings"
+          package="com.derp.device.DeviceSettings"
           android:versionCode="1"
           android:versionName="1.0" >
 
@@ -25,8 +25,8 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="com.android.systemui.permission.PLUGIN" />
 
-    <protected-broadcast android:name="com.yaap.device.DeviceSettings.UPDATE_SETTINGS" />
-    <protected-broadcast android:name="com.yaap.device.DeviceSettings.UPDATE_SLIDER" />
+    <protected-broadcast android:name="com.derp.device.DeviceSettings.UPDATE_SETTINGS" />
+    <protected-broadcast android:name="com.derp.device.DeviceSettings.UPDATE_SLIDER" />
     <protected-broadcast android:name="android.intent.action.SCREEN_CAMERA_GESTURE" />
     <protected-broadcast android:name="com.android.systemui.doze.pulse" />
 
@@ -45,11 +45,14 @@
                 <action android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES" />
             </intent-filter>
             <meta-data
+                android:name="com.android.settings.order"
+                android:value="-265" />
+            <meta-data
                 android:name="com.android.settings.icon"
                 android:resource="@drawable/ic_settings_device" />
             <meta-data
                 android:name="com.android.settings.category"
-                android:value="com.android.settings.category.ia.homepage" />
+                android:value="com.android.settings.category.ia.system" />
             <meta-data android:name="com.android.settings.summary"
                 android:resource="@string/device_summary" />
         </activity>
@@ -64,7 +67,7 @@
         </activity>
 
         <receiver
-            android:name="com.yaap.device.DeviceSettings.Startup"
+            android:name="com.derp.device.DeviceSettings.Startup"
             android:directBootAware="true"
             android:exported="false" >
             <intent-filter android:priority="100" >
@@ -75,7 +78,7 @@
 
         <!-- Quick Settings Tiles -->
         <service
-            android:name="com.yaap.device.DeviceSettings.DCModeTileService"
+            android:name="com.derp.device.DeviceSettings.DCModeTileService"
             android:icon="@drawable/ic_dimming_off"
             android:label="@string/tile_dc_mode"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
@@ -88,7 +91,7 @@
                 android:value="true" />
         </service>
         <service
-            android:name="com.yaap.device.DeviceSettings.HBMModeTileService"
+            android:name="com.derp.device.DeviceSettings.HBMModeTileService"
             android:icon="@drawable/ic_hbm_tile"
             android:label="@string/tile_hbm_mode"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
@@ -101,7 +104,7 @@
                 android:value="true" />
         </service>
         <service
-            android:name="com.yaap.device.DeviceSettings.RefreshRateTileService"
+            android:name="com.derp.device.DeviceSettings.RefreshRateTileService"
             android:icon="@drawable/ic_refresh_tile_60"
             android:label="@string/tile_refresh_rate"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
@@ -114,7 +117,7 @@
                 android:value="true" />
         </service>
 
-        <service android:name="com.yaap.device.DeviceSettings.FPSInfoService"
+        <service android:name="com.derp.device.DeviceSettings.FPSInfoService"
                 android:exported="false">
         </service>
 
@@ -146,7 +149,7 @@
                 android:value="true" />
         </service>
 
-        <service android:name="com.yaap.device.DeviceSettings.HBMModeService"
+        <service android:name="com.derp.device.DeviceSettings.HBMModeService"
             android:exported="false" />
 
         <service
@@ -160,7 +163,7 @@
         <!-- Search indexing -->
         <provider
             android:name=".SettingsSearchIndexablesProvider"
-            android:authorities="com.yaap.device"
+            android:authorities="com.derp.device"
             android:multiprocess="false"
             android:grantUriPermissions="true"
             android:permission="android.permission.READ_SEARCH_INDEXABLES"
