@@ -441,7 +441,6 @@ PRODUCT_PACKAGES += \
     extphonelib_product.xml \
     ims-ext-common \
     ims_ext_common.xml \
-    tcmiface \
     telephony-ext \
     TelephonyResOneplus \
     qti-telephony-hidl-wrapper \
@@ -454,7 +453,6 @@ PRODUCT_PACKAGES += \
     qti_telephony_utils_prd.xml
 
 PRODUCT_BOOT_JARS += \
-    tcmiface \
     telephony-ext
 
 PRODUCT_COPY_FILES += \
