@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2024 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+
+    <!-- Recognizing fingerprint animation -->
+    <dimen name="udfps_animation_size">176dp</dimen>
+    <dimen name="udfps_animation_offset">28dp</dimen>
+
+    <!-- Height of the faceunlock image view -->
+    <dimen name="keyguard_face_unlock_margin_bottom">125dp</dimen>
+
+</resources>
