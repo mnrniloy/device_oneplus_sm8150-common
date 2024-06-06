@@ -256,10 +256,6 @@ PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.earlyGl.app.duration=16000000
 endif
 
-# Dolby
-PRODUCT_PACKAGES += \
-    OnePlusDolby
-
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.4-service.clearkey
