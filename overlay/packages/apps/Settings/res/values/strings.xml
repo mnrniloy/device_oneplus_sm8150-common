@@ -19,4 +19,8 @@
     <string name="panel_mode_boosted">Boosted Natural</string>
     <string name="panel_mode_sturated">Saturated</string>
     <string name="panel_mode_wide">Wide Color Mode</string>
+
+    <string name="maintainer_git_username">mnrniloy</string>
+    <string name="maintainer_tele_username">mnrniloy0</string>
+    <string name="maintainer_fb_username">mnrniloy0</string>
 </resources>
