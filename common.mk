@@ -373,6 +373,9 @@ PRODUCT_PACKAGES += \
     libstagefrighthw \
     libstagefright_softomx_plugin.vendor
 
+# OnePlus apps
+$(call inherit-product-if-exists, vendor/oneplus/apps/apps-vendor.mk)
+
 # Perf
 PRODUCT_PACKAGES += \
     libqti-perfd-client
