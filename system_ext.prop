@@ -14,6 +14,9 @@ persist.vendor.dpm.feature=11
 # fastbootd
 ro.fastbootd.available=true
 
+# Support for GBoard Themes
+ro.com.google.ime.themes_dir=/system/etc/gboard_theme
+
 # GPS
 persist.backup.ntpServer=0.pool.ntp.org
 
