@@ -25,6 +25,9 @@ persist.vendor.cne.feature=1
 # CoreSight STM
 persist.debug.coresight.config=stm-events
 
+# GBoard Default Theme and Theme-location
+ro.com.google.ime.themes_dir=/system/etc/gboard_theme
+
 # GPS
 persist.vendor.overlay.izat.optin=rro
 
