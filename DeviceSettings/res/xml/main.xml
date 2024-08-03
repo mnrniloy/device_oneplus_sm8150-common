@@ -45,16 +45,6 @@
         android:entryValues="@array/reading_mode_values"
         android:defaultValue="0" />
 
-    <Preference
-        android:key="touchscreen_gesture_category"
-        android:title="@string/touchscreen_gesture_settings_title"
-        android:summary="@string/touchscreen_gesture_settings_summary"
-        android:persistent="false" >
-        <intent android:action="android.intent.action.MAIN"
-                android:targetPackage="com.derp.device.DeviceSettings"
-                android:targetClass="com.derp.device.DeviceSettings.TouchscreenGestureSettings" />
-    </Preference>
-
     <PreferenceCategory
         android:key="slider"
         android:title="@string/notification_slider_category_title">

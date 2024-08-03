@@ -76,7 +76,6 @@ public class Startup extends BroadcastReceiver {
                 dePrefsEditor.commit();
                 oldPrefsEditor.commit();
 
-                TouchscreenGestureSettings.MainSettingsFragment.migrateTouchscreenGestureStates(context);
             }
 
             // disable unavailable tiles
@@ -87,26 +86,6 @@ public class Startup extends BroadcastReceiver {
                 if (enabledSetting != COMPONENT_ENABLED_STATE_DISABLED)
                     pm.setComponentEnabledSetting(cn, COMPONENT_ENABLED_STATE_DISABLED, 0);
             }
-        }
-
-        TouchscreenGestureSettings.MainSettingsFragment.restoreTouchscreenGestureStates(context);
-
-        // restoring state from DE shared preferences
-        for (Map.Entry<String, String> set : sKeyFileMap.entrySet()) {
-            final String prefKey = set.getKey();
-            final String file = set.getValue();
-            restore(file, dePrefs.getBoolean(prefKey, false));
-        }
-
-        // reset prefs that reflect a state that does not retain a reboot
-        List<String> touchKeys = TouchscreenGestureSettings.MainSettingsFragment.getPrefKeys(context);
-        Map<String,?> keys = dePrefs.getAll();
-        for (Map.Entry<String,?> entry : keys.entrySet()) {
-            final String key = entry.getKey();
-            if (sKeyFileMap.containsKey(key)) continue;
-            if (touchKeys.contains(key)) continue;
-            if (KEY_MIGRATION_DONE.equals(key)) continue;
-            dePrefs.edit().remove(key).commit();
         }
     }
 }
