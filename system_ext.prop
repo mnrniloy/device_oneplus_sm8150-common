@@ -18,6 +18,9 @@ ro.fastbootd.available=true
 # FUSE
 persist.sys.fuse.passthrough.enable=true
 
+# GBoard Themes
+ro.com.google.ime.themes_dir=/system/etc/gboard_theme
+
 # GPS
 persist.backup.ntpServer=0.pool.ntp.org
 
