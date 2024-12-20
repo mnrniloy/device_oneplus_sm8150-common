@@ -70,7 +70,7 @@ TARGET_SURFACEFLINGER_UDFPS_LIB := //hardware/oplus:libudfps_extension.oplus
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     hardware/oplus/vintf/device_framework_matrix.xml \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
-    vendor/lineage/config/device_framework_matrix.xml
+    vendor/bliss/config/device_framework_matrix.xml
 DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 
@@ -179,9 +179,9 @@ include $(COMMON_PATH)/sepolicy/SEPolicy.mk
 BOARD_AVB_ENABLE := true
 ifneq (user,$(TARGET_BUILD_VARIANT))
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
-else ifneq (,$(wildcard .android-certs/releasekey.key))
+else ifneq (,$(wildcard vendor/bliss-priv/keys/releasekey.key))
 BOARD_AVB_ALGORITHM := SHA256_RSA2048
-BOARD_AVB_KEY_PATH := .android-certs/releasekey.key
+BOARD_AVB_KEY_PATH := vendor/bliss-priv/keys/releasekey.key
 else
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
 endif
