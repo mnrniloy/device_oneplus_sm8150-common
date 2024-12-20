@@ -135,4 +135,7 @@
     <!-- Specifies the maximum burn-in offset vertically. -->
     <integer name="config_burnInProtectionMaxVerticalOffset">40</integer>
 
+    <!-- Whether device supports Touch Gestures -->
+    <bool name="config_deviceSupportsTouchGestures">true</bool>
+
 </resources>
